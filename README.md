@@ -335,8 +335,7 @@ This name is meant to be used in programming codes and scripts. So it should onl
 
 <a id="var_long_name"></a>
 + **var_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable label for the variable in accordance with the CF and COARDS conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>]. This name will present your variable in the CMAP catalog (<a href="#fig_var_long_name_cat">Fig. 9</a>), visualization search dialog (<a href="#fig_var_long_name_search_viz">Fig. 10</a>). `var_long_name` can contain any unicode character, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#var_comment">var_comment</a> in case you would like to add a full textual description (with not length limits) for your variable. 
- <br/>  
+ A descriptive and human-readable label for the variable in accordance with the CF and COARDS conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>]. This name will present your variable in the CMAP catalog (<a href="#fig_var_long_name_cat">Fig. 9</a>), visualization search dialog (<a href="#fig_var_long_name_search_viz">Fig. 10</a>). `var_long_name` can contain any unicode character, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#var_comment">var_comment</a> in case you would like to add a full textual description (with not length limits) for your variable. <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
