@@ -145,8 +145,7 @@ This name is meant to be used in programming codes and scripts. So it should onl
 
 <a id="dataset_long_name"></a>
 + **dataset_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable name for the dataset. This name will present your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#dataset_description">dataset_description</a>  in case you would like to add a full textual description (with not length limits) for your dataset. 
- <br/>  
+ A descriptive and human-readable name for the dataset. This name will present your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#dataset_description">dataset_description</a>  in case you would like to add a full textual description (with not length limits) for your dataset. <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
