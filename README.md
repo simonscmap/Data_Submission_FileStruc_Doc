@@ -319,7 +319,7 @@ This name is meant to be used in programming codes and scripts. So it should onl
 <br/><br/>    
 
 <figure>
-  <img id="fig_var_short_name_cat" src="./pics/var_short_name_cat.PNG" alt="Variable short name in catalog">
+  <img id="fig_var_short_name_cat" src="./pics/var_short_name_cat.png" alt="Variable short name in catalog">
   <figcaption>Figure 7. A sample dataset shown in the Simons CMAP catalog. The "var_shot_name" is highlighted in the red rectangle.</figcaption>
 </figure>
 
