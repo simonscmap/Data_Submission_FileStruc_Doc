@@ -38,18 +38,18 @@
 
 1. <a href="#bibliography">Bibliography</a>
     * [References](#references)
-
-
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-
 ------------------------------------------
+
+
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
 <a id="introduction"></a>
 ## Introduction 
 <div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div>   
-This document describes the specifications of the data and metadata fields required for submitting datasets to the Simons CMAP database. As long as the required fields are provided the submitted data can be in any file format such as netCDF, plain text file, CSV, or Excel files. For simplicity, we have created an empty dataset template in Excel format which can be found [here](https://github.com/simonscmap/DBIngest/raw/master/template/datasetTemplate.xlsx). Please use this template to load and submit your dataset. The data and metadata field names (e.g. time, lat, lon, short_name, long_name, ...) used in the template file have been inspired by the CF and COARDS naming conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>].
+This document describes the specifications of the data and metadata fields required for submitting datasets to the Simons CMAP database. As long as the required fields are provided the submitted data can be in any file format such as netCDF, plain text file, CSV, or Excel files. For simplicity, we have created an empty dataset template in Excel format which can be found <a href="https://github.com/simonscmap/DBIngest/raw/master/template/datasetTemplate.xlsx">here</a>. Please use this template to load and submit your dataset. The data and metadata field names (e.g. time, lat, lon, short_name, long_name, ...) used in the template file have been inspired by the CF and COARDS naming conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>].
 
 
 The CMAP data template consists of three sheets: data, dataset metadata, and variable metadata. Data is stored in the first sheet called “data”. The second sheet stores the dataset metadata and is called “dataset_meta_data”. Metadata associated with the variables in the dataset are entered in the third sheet, “vars_meta_data”. All columns are required unless specified otherwise. Below are a few example datasets that have been prepared using the specifications described in this document:
@@ -58,14 +58,14 @@ The CMAP data template consists of three sheets: data, dataset metadata, and var
 * [Gradients 1 Fluormetric Chl](https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020-03-03_V1.1_example.xlsx)
 * [Gradients 1 Cobalamin](https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example.xlsx)
 * [Gradients 3 Underway CTD](https://github.com/simonscmap/DBIngest/raw/master/template/KM1906_Gradients3_uwayCTD_example.xlsx)
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-
-
-
 ------------------------------------------
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+
 <a id="data_sheet"></a>
 ## Data Sheet
 <div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div> 
@@ -119,16 +119,16 @@ This column holds the depth values with the following characteristics:<br/>
 + **var<sub>1</sub>  ...  var<sub>n</sub>**<br/>
 These columns represent the dataset variables (measurements). Please rename 
 them to appropriate names. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. For missing values, meaning the instances where data was not taken, leave the cell empty. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-
-
-
-
-
 ------------------------------------------
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+
+
+
 <a id="dataset_metadata"></a>
 ## Dataset Metadata
 <div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div>   
@@ -290,17 +290,16 @@ If your dataset represents measurements made during a cruise expedition (or expe
     * Constraint: No length limits
     * Example: KOK1606, Gradients 1
 <br/><br/>  
-
-
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-
-
-
-
 ------------------------------------------
+
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+
+
 
 <a id="variable_metadata"></a>
 ## Variable Metadata
@@ -449,11 +448,11 @@ Use this field to communicate any detailed information about this particular var
 </figure>
 
 <br/><br/> 
-
-
-
-
 ------------------------------------------
+
+
+
+
 
 <a id="bibliography"></a>
 ## Bibliography
