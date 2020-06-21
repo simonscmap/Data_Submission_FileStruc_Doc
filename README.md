@@ -52,7 +52,7 @@
 This document describes the specifications of the data and metadata fields required for submitting datasets to the Simons CMAP database. The submitted data can be in any file format such as netCDF, parquet, plain text, CSV, or Excel files. The only requirement is that information for all required fields is provided. For simplicity, we have created an empty dataset template in Excel format that can be found <a href="https://github.com/simonscmap/DBIngest/raw/master/template/datasetTemplate.xlsx">here</a>. You can use this template to load and submit your dataset. The data and metadata field names (e.g. time, lat, lon, short_name, long_name, ...) used in the template file are based on the CF and COARDS naming conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>].
 
 
-The CMAP data template consists of three sheets: data, dataset metadata, and variable metadata. Data is stored in the first sheet called “data”. Metadata that describes the dataset is entered in the second sheet called “dataset_meta_data”. Metadata associated with the variables in the dataset are entered in the third sheet called “vars_meta_data”. Information must be provided for all columns except those specifcally noted as optional. For those datasets that use the excel template, a web-based tool is available through Simons CMAP  to validate whether a given  dataset  conforms to structure requirements. Below are a few example datasets that have been prepared using the specifications described in this document: 
+The CMAP data template consists of three sheets: data, dataset metadata, and variable metadata. Data is stored in the first sheet called “data”. Metadata that describes the dataset is entered in the second sheet called “dataset_meta_data”. Metadata associated with the variables in the dataset are entered in the third sheet called “vars_meta_data”. Information must be provided for all columns except those specifcally noted as optional. For those datasets that use the Excel template, a web-based tool is available through Simons CMAP  to validate whether a given  dataset  conforms to structure requirements. Below are a few example datasets that have been prepared using the specifications described in this document: 
 
 * [SeaFlow](https://github.com/simonscmap/DBIngest/raw/master/template/SeaFlow_example.xlsx)
 * [Gradients 1 Fluormetric Chl](https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020-03-03_V1.1_example.xlsx)
@@ -74,7 +74,7 @@ The CMAP data template consists of three sheets: data, dataset metadata, and var
 |:----------:|:-------------:|:------:|:------:|:------:|:------:|:------:|
 | example: 2016-5-01T15:02:00 | 25  | -158 | 5 | value | ... | value |
 
-All data points are stored in the "Data" sheet. Each data point must have time and location information. The exact name and order of the time and location columns are shown in the table above. If a dataset does not have depth values (sea surface measurements) you may remove the depth column. The columns var<sub>1</sub>  ...  var<sub>n</sub> represent the dataset variables (measurements). Please rename var<sub>1</sub>  ...  var<sub>n</sub> to appropriate names. The format of "time", "lat", "lon", and "depth" columns are described in the following sections. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more detailed information.
+All data points are stored in the "Data" sheet. Each data point must have time and location information. The exact name and order of the time and location columns are shown in the table above. If a dataset does not have depth values (e.g., sea surface measurements), you may remove the depth column. The columns var<sub>1</sub>  ...  var<sub>n</sub> represent the dataset variables (measurements). Please rename var<sub>1</sub>  ...  var<sub>n</sub> to appropriate names. The format of "time", "lat", "lon", and "depth" columns are described in the following sections. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more detailed information.
 <br/><br/>
 
 <a id="time"></a>
@@ -110,7 +110,7 @@ This column holds the longitude values with the following characteristics:<br/>
 <a id="depth"></a>
 + **depth**<br/>
 This column holds the depth values with the following characteristics:<br/>
-    * Type: Positive numeric values. It is 0 at surface and increases at lower depth levels.
+    * Type: Positive numeric values. It is 0 at surface and increases with depth.
     * Format: Decimal
     * Unit: meter 
 <br/><br/>
@@ -118,7 +118,7 @@ This column holds the depth values with the following characteristics:<br/>
 <a id="vars"></a>
 + **var<sub>1</sub>  ...  var<sub>n</sub>**<br/>
 These columns represent the dataset variables (measurements). Please rename 
-them to appropriate names. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. For missing values, meaning the instances where data was not taken, leave the cell empty. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
+them to names appropriate for your data. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. For missing values, meaning the instances where data was not taken, leave the cell empty. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
 ------------------------------------------
 
 <br/><br/>
