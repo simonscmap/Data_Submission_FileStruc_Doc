@@ -110,7 +110,7 @@ This column holds the longitude values with the following characteristics:<br/>
 <a id="depth"></a>
 + **depth**<br/>
 This column holds the depth values with the following characteristics:<br/>
-    * Type: Positive numeric values. It is 0 at surface and increases with depth.
+    * Type: Positive numeric values. It is 0 at surface with increased values with depth.
     * Format: Decimal
     * Unit: meter 
 <br/><br/>
@@ -118,7 +118,7 @@ This column holds the depth values with the following characteristics:<br/>
 <a id="vars"></a>
 + **var<sub>1</sub>  ...  var<sub>n</sub>**<br/>
 These columns represent the dataset variables (measurements). Please rename 
-them to names appropriate for your data. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. For missing values, meaning the instances where data was not taken, leave the cell empty. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
+them to names appropriate for your data. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. Leave a given cell empty for those instances when data was not taken and a value is missing. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
 ------------------------------------------
 
 <br/><br/>
