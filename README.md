@@ -223,7 +223,7 @@ Specifies the group and/or the institute name of the data owner(s). It can also
 
 <a id="dataset_distributor"></a>
 + **dataset_distributor**<br/>
-If your dataset has already published by a data distributor provide a link to the data distributor. Otherwise, leave this field empty. This is not a required field.<br/>
+If your dataset has already been published by a data distributor provide a link to the data distributor. Otherwise, leave this field empty. This is not a required field.<br/>
 
     * Required: No (optional)
     * Constraint: Less than 100 characters
