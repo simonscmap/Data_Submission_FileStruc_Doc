@@ -200,7 +200,7 @@ This is a required field that provides a broad category description of how a dat
 
 <a id="dataset_source"></a>
 + **dataset_source<sup>*</sup>**<br/>
-Specifies the group and/or the institute name of the data owner(s). It can also include any link (such as a website) to the data producers. This information will be visible in the CMAP catalog as shown in the figure below. Also, dataset_source will be annotated to any visualization made using the dataset (<a href="#fig_dataset_source_viz">Fig. 4</a>). This is a required field and its length must be less than 100 characters. <br/>
+Specifies the group and/or the institute name of the data owner(s). It can also include any link (such as a website) to the data producers. This information will be visible in the CMAP catalog as shown in the figure below <!--- Mohammad: need to add a link to Fig. 3 here -->. Also, dataset_source will be annotated to any visualization made using the dataset (<a href="#fig_dataset_source_viz">Fig. 4</a>). This is a required field and its length must be less than 100 characters. <br/>
 
     * Required: Yes
     * Constraint: Less than 100 characters
