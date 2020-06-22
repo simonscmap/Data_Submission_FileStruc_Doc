@@ -137,7 +137,7 @@ This sheet holds a list of top-level attributes about the dataset such as the da
 
 <a id="dataset_short_name"></a>
 + **dataset_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts.  It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. It must be shorter than 50 characters and is a required field. <!--- Comment for Raphael/Mohammad: Please note, the short_name used in the chlorophyll example has a space it in: Gradients 1-KOK1606-FluoremetricChlorophyll. I did not check the other entries for the other example datasets. --> <br/> 
+This name is meant to be used in programming codes and scripts.  It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. The name must be shorter than 50 characters and is a required field. <!--- Comment for Raphael/Mohammad: Please note, the short_name used in the chlorophyll example has a space it in: Gradients 1-KOK1606-FluoremetricChlorophyll. I did not check the other entries for the other example datasets. --> <br/> 
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -145,7 +145,7 @@ This name is meant to be used in programming codes and scripts.  It should only 
 
 <a id="dataset_long_name"></a>
 + **dataset_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in    <a href="#dataset_description">dataset_description</a> . <br/>  
+ A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in "<a href="#dataset_description">dataset_description</a>" . <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
@@ -166,7 +166,7 @@ This name is meant to be used in programming codes and scripts.  It should only 
 
 <a id="dataset_version"></a>
 + **dataset_version<sup>*</sup>**<br/>
-Please assign a version number or an identifier to your dataset such as "1.0.0" or "ver 1". Version identifiers will help tracking the evolution of a dataset over time. <br/>  
+Please assign a version number or an identifier to your dataset such as "1.0.0" or "ver 1". Version identifiers will help track the evolution of a dataset over time. <br/>  
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -180,21 +180,21 @@ Indicates the release date of the dataset. If your dataset has been previously p
 
     * Required: Yes
     * Constraint: Less than 50 characters
-    * Example: 1.0
+    * Example: 2020-06-22
 <br/><br/>  
 
 
 <a id="dataset_make"></a>
 + **dataset_make<sup>*</sup>**<br/>
-This is a required field specifying a broad production category for the dataset (also referred to as `dataset make`). It can only have a single value from a fixed set of options (observation, model, assimilation, laboratory) which are described below. This field will greatly help to find the data at CMAP by categorizing them according to their make class. Please contact us if you believe your dataset make is not consistent with any of the values below:<br/>
+This is a required field that provides a broad category description of how a dataset was produced (also referred to as `dataset make`). Each dataset has a single descriptor from a fixed set of options (observation, model, assimilation, laboratory), which are described below. This field will help in discovery of data in CMAP by categorizing datasets according to their make class. Please contact us if you believe your dataset make is not consistent with any of the values below:<br/>
 
-    * **Observation**: refers to any in-situ or remote sensing measurements such as measurements made during a cruise expedition, data from an in-situ sensor, or satellite observations. Observations made at laboratory settings (culture experiments) have their distinct category and do not fall in this category.
+    * **Observation**: refers to any in-situ or remote sensing measurements such as measurements made during a cruise expedition, data from an in-situ sensor, or satellite observations. Observations made as part of laboratory experiments <!--- Mohammad: to consider - should we include experiments conducted at sea such as on-deck incubation experiments -->  or at-sea experiments have their distinct category and do not fall in this category.
 
-    * **Model**: refers to the outputs of the numerical simulations.  
+    * **Model**: refers to the outputs of numerical simulations.  
 
-    * **Assimilation**: refers to the products that are a blend of observations and numerical models.
+    * **Assimilation**: refers to  products that are a blend of observations and numerical models.
 
-    * **Laboratory**: refers to the observations made in a laboratory setting such as culture experiment results.
+    * **Laboratory**: refers to the observations made in a laboratory setting such as culture experiment results. <!--- comment for Mohammad: if we include at-sea experiments, this "make" could be Experimental (or Experiments). -->
 <br/><br/>  
 
 
@@ -233,7 +233,7 @@ If your dataset has already published by a data distributor provide a link to th
 
 <a id="dataset_acknowledgement"></a>
 + **dataset_acknowledgement**<br/>
-Specify how your dataset should be acknowleged. You may mention your funding agency, grant number, or you may ask the CMAP users to acknowledge your dataset via a certain phrase. Dataset acknowlegment will be visible in the catalog page (<a href="#fig_dataset_ack_cat">Fig. 5</a>). This is not a required field.<br/>
+Specify how your dataset should be acknowleged. You may mention your funding agency, grant number, or you may ask those that use your data to acknowledge your dataset with a particular statement. Dataset acknowlegment will be visible in the catalog page (<a href="#fig_dataset_ack_cat">Fig. 5</a>). This is not a required field.<br/>
 
     * Required: No (optional)
     * Constraint: No length limits    
@@ -250,13 +250,13 @@ Specify how your dataset should be acknowleged. You may mention your funding age
 
 <a id="dataset_history"></a>
 + **dataset_history**<br/>
-Use this field in case your dataset has evolved over time and you wish to add notes about the history of your dataset. Otherwise, leave this field empty. This is not a required field.
+Use this field if your dataset has evolved over time and you wish to add notes about the history of your dataset. Otherwise, leave this field empty. This is not a required field.
 <br/><br/>  
 
 
 <a id="dataset_description"></a>
 + **dataset_description<sup>*</sup>**<br/>
-Include any description that you think will guide the reader to better understand your dataset. This can involve information about data acquisition, processing methods, figures, and links to the external contents. This field acts as the dataset documentation is visible in the Simons CMAP catalog (<a href="#fig_dataset_description_cat">Fig. 6</a>). This field is required.<br/>  
+Include any description that you think will help a reader  better understand your dataset. This description can include information about data acquisition, processing methods, figures, and links to the external contents. This field serves as the dataset documentation that is visible in the Simons CMAP catalog (<a href="#fig_dataset_description_cat">Fig. 6</a>). This field is required.<br/>  
 
     * Required: Yes
     * Constraint: No length limits
@@ -272,7 +272,7 @@ Include any description that you think will guide the reader to better understan
 
 <a id="dataset_references"></a>
 + **dataset_references**<br/>
-List any publications or documentation that one may cite in reference to the dataset. If there are more than one references, please put them in separate cells under the dataset_reference column. Leave this field empty if there are no publications associated with this dataset. This is not a required field. 
+List any publications or documentation that one may cite in reference to the dataset. If there is more than one reference, please put them in separate cells under the dataset_reference column. Leave this field empty if there are no publications associated with this dataset. This is not a required field. 
 <br/><br/>  
 
 
@@ -284,7 +284,7 @@ This is a flag indicating whether the dataset represents a climatological produ
 
 <a id="cruise_names"></a>
 + **cruise_names**<br/>
-If your dataset represents measurements made during a cruise expedition (or expeditions), provide a list of cruise official names here. In case your dataset is associated with more than one cruise, please put them in separate cells under the cruise_names column. If the cruises have any nicknames, please include them too. Leave this field blank if your dataset is not associated with a cruise expedition. This is not a required field.<br/>
+If your dataset represents measurements made during a cruise expedition (or expeditions), provide a list of cruise official names here. If your dataset is associated with more than one cruise, please put them in separate cells under the cruise_names column. If the cruises have any nicknames, please include them too. Leave this field blank if your dataset is not associated with a cruise expedition. This is not a required field.<br/>
 
     * Required: No (optional)
     * Constraint: No length limits
