@@ -166,7 +166,7 @@ This name is meant to be used in programming codes and scripts.  It should only 
 
 <a id="dataset_version"></a>
 + **dataset_version<sup>*</sup>**<br/>
-Please assign a version number or an identifier to your dataset such as "1.0.0" or "ver 1". Version identifiers will help track the evolution of a dataset over time. <br/>  
+Please assign a version number or an identifier to your dataset such as "1.0.0" or "ver 1". Version identifiers will help track the evolution of a dataset over time. <br/>  final?
 
     * Required: Yes
     * Constraint: Less than 50 characters
