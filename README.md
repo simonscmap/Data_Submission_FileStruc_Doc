@@ -356,7 +356,7 @@ This name is meant to be used in programming codes and scripts. It should only c
 
 <a id="var_sensor"></a>
 + **var_sensor<sup>*</sup>**<br/>
-This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. This field will significantly help to find and categorize data achieved using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog. <!--- Mohammad: this is  confusing to me.  What is someone supposed to enter here for the "makes" besides  "observation"? I think we need to add some more examples for other makes -->
+This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. This field will significantly help to find and categorize data generated using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog. <!--- Mohammad: this is  confusing to me.  What is someone supposed to enter here for the "makes" besides  "observation"? I think we need to add some more examples for other makes -->
 
 <br/><br/>  
 
