@@ -137,7 +137,7 @@ This sheet holds a list of top-level attributes about the dataset such as the da
 
 <a id="dataset_short_name"></a>
 + **dataset_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts.  It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. The name must be shorter than 50 characters and is a required field. <!--- Comment for Raphael/Mohammad: Please note, the short_name used in the chlorophyll example has a space it in: Gradients 1-KOK1606-FluoremetricChlorophyll. I did not check the other entries for the other example datasets. --> <br/> 
+This name is meant to be used in programming code and scripts.  It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. The name must be shorter than 50 characters and is a required field. <!--- Comment for Raphael/Mohammad: Please note, the short_name used in the chlorophyll example has a space it in: Gradients 1-KOK1606-FluoremetricChlorophyll. I did not check the other entries for the other example datasets. --> <br/> 
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -311,7 +311,7 @@ A dataset can contain multiple different measurements (variables). This sheet (l
 
 <a id="var_short_name"></a>
 + **var_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc.  `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/> 
+This name is meant to be used in programming code and scripts. It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc.  `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/> 
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -445,7 +445,7 @@ Use this field to communicate any detailed information about this particular var
 
 <figure>
   <img id="fig_var_comment_cat" src="./pics/var_comment_cat.png" alt="Variable description in Catalog">
-  <figcaption>Figure 11. A sample dataset shown in the Simons CMAP catalog. The "var_commentn" is accessible using the "Comment" button, highlighted in the red rectangle.</figcaption>
+  <figcaption>Figure 11. A sample dataset shown in the Simons CMAP catalog. The "var_comment" is accessible using the "Comment" button, highlighted in the red rectangle.</figcaption>
 </figure>
 
 <br/><br/> 
