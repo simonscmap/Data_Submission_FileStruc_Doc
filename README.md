@@ -137,7 +137,7 @@ This sheet holds a list of top-level attributes about the dataset such as the da
 
 <a id="dataset_short_name"></a>
 + **dataset_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts. So it should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. It must be shorter than 50 characters and is a required field. <br/> 
+This name is meant to be used in programming codes and scripts.  It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc. It must be shorter than 50 characters and is a required field. <!--- Comment for Raphael/Mohammad: Please note, the short_name used in the chlorophyll example has a space it in: Gradients 1-KOK1606-FluoremetricChlorophyll. I did not check the other entries for the other example datasets. --> <br/> 
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -145,7 +145,7 @@ This name is meant to be used in programming codes and scripts. So it should onl
 
 <a id="dataset_long_name"></a>
 + **dataset_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable name for the dataset. This name will present your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#dataset_description">dataset_description</a>  in case you would like to add a full textual description (with not length limits) for your dataset. <br/>  
+ A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in    <a href="#dataset_description">dataset_description</a> . <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
