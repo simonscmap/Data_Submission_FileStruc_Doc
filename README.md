@@ -214,7 +214,7 @@ Specifies the group and/or the institute name of the data owner(s). It can also
 
 <figure>
   <img id="fig_dataset_source_viz" src="./pics/dataset_source_viz.png" alt="Dataset Source in Visualizations">
-  <figcaption>Figure 4. The "dataset_source" appears in visualization made using the corresponding dataset (enclosed in the red rectangle).</figcaption>
+  <figcaption>Figure 4. The "dataset_source" appears in visualizations made using the corresponding dataset (enclosed in the red rectangle).</figcaption>
 </figure>
 
 <!--- Comment For Raphael: data source in plots (see figure above) seem to be data distributor not data source. Ask Mike to correct it. -->
