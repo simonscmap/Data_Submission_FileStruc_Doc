@@ -334,7 +334,7 @@ This name is meant to be used in programming codes and scripts. It should only c
 
 <a id="var_long_name"></a>
 + **var_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable label for the variable in accordance with the CF and COARDS conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>]. This name will present your variable in the CMAP catalog (<a href="#fig_var_long_name_cat">Fig. 9</a>), visualization search dialog (<a href="#fig_var_long_name_search_viz">Fig. 10</a>). `var_long_name` can contain any unicode character, but please avoid names longer than 200 characters as they might get trimmed while displayed on graphical interfaces. Please refer to <a href="#var_comment">var_comment</a> in case you would like to add a full textual description (with not length limits) for your variable. <br/>  
+ A descriptive and human-readable label for the variable in accordance with the CF and COARDS conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>]. This name will present your variable in the CMAP catalog (<a href="#fig_var_long_name_cat">Fig. 9</a>) and visualization search dialog (<a href="#fig_var_long_name_search_viz">Fig. 10</a>). `var_long_name` can contain any unicode character, but please avoid names longer than 200 characters as they may get trimmed while displayed on graphical interfaces. Please use <a href="#var_comment">var_comment</a> if you would like to add a full textual description (with no length limits) for your variable. <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
@@ -356,18 +356,18 @@ This name is meant to be used in programming codes and scripts. It should only c
 
 <a id="var_sensor"></a>
 + **var_sensor<sup>*</sup>**<br/>
-This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. This field will significantly help to find and categorize data achieved using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog.
+This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. This field will significantly help to find and categorize data achieved using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog. <!--- Mohammad: this is  confusing to me.  What is someone supposed to enter here for the "makes" besides  "observation"? I think we need to add some more examples for other makes -->
 
 <br/><br/>  
 
 
 <a id="var_unit"></a>
 + **var_unit**<br/>
-Specifies the variable's unit, if applicable. Leave this field blank if your variable is unitless (e.g. "station numbers" or "quality flags"). It may contain unicode characters such as subscripts and superscripts. `var_unit` will be visible in the Simons CMAP catalog (see <a href="#fig_var_long_name_cat">Fig. 9</a>) and in the generated visualizations (see <a href="#fig_var_short_name_viz">Fig. 8</a>). This field is not required.<br/>  
+Specifies  variable units, if applicable. Leave this field blank if your variable is unitless (e.g. "station numbers" or "quality flags"). Units may contain unicode characters such as subscripts and superscripts. `var_unit` will be visible in the Simons CMAP catalog (see <a href="#fig_var_long_name_cat">Fig. 9</a>) and in the generated visualizations (see <a href="#fig_var_short_name_viz">Fig. 8</a>). This field is not required.<br/>  
 
     * Required: No (optional)
     * Constraint: Less than 50 characters
-    * Example: ul L<sup>-1</sup>
+    * Example: ug L<sup>-1</sup>
 <br/><br/>    
 
 
@@ -385,7 +385,7 @@ Specifies the spatial resolution of the variable. Typically, gridded products ha
 
 <a id="var_temporal_res"></a>
 + **var_temporal_res<sup>*</sup>**<br/>
-Specifies the temporal resolution between the subsequent measurements (such as daily, hourly, 3-minutes, etc). Typically field expedition measurements do not have a regular temporal spacing in which case you may use the term "irregular" to fill out this field. `var_temporal_res` will be visible in the Simons CMAP catalog (see <a href="#fig_var_long_name_cat">Fig. 9</a>). This field is required.<br/>  
+Specifies the temporal resolution of measurements (such as daily, hourly, 3-minutes, etc). If the measurements do not have a regular temporal spacing, use the term "irregular" to fill out this field. `var_temporal_res` will be visible in the Simons CMAP catalog (see <a href="#fig_var_long_name_cat">Fig. 9</a>). This field is required.<br/>  
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -413,22 +413,23 @@ This is a flag field and can only be 0 or 1. Fill this field by 1, if you think 
 
 <a id="var_keywords"></a>
 + **var_keywords<sup>*</sup>**<br/>
-Every single variable in CMAP is annotated with a range of semantically related keywords making the variable a lot more findable. For example, if one looks for "PO4" a list of all phosphate data are retrieved even if they are not named "PO4". Similarly, if one searches for "MIT", CMAP returns all variables generated by MIT groups, or if one looks for "model" it should only return model outputs. These "semantic" searches are made possible using the keywords that are added to each variable. We would like to have keywords to cover all of the following areas (if applicable). Please keep in mind that you may add as many keyword as you wish to a variable; there is no limit to the number of keywords. The keywords are case-insensetive and you may add/remove them at any point (even after data ingestion). This is a required field. 
+Every variable in CMAP is annotated with a range of semantically related keywords to ensure a variable can be easily discovered. For example, use of keywords allows you to search using the term "PO4" and retrieve a list of all phosphate data even if the var_long_name was not "PO4" for a given dataset. Similarly, if one searches for "MIT", CMAP returns all variables generated by MIT groups, or if one looks for "model", only model outputs are returned. These "semantic" searches are made possible using the keywords that are added to each variable. We would like to have keywords to cover all of the following areas (if applicable). Please note that there is no limit to the number of keywords used for a variable; you may use as many keywords as you wish for a give a variable; . The keywords are case-insensitive and you may add/remove them at any point (even after data ingestion). This is a required field. 
 
     * Alternative names: other official, unofficial, abbreviation, technical (or jargon) names or notations associated with the variable. <br/> 
     Examples: Nitrate, NO3, NO_3
+    <!--- Mohammad - do you want to include an example that illustrates that you don't need to include "subset" keywords like Pro, Proch, Prochlor, Prochlorococcus -->
 
     * Method and Instrument: Keywords related to the method and instruments used for the variable measurements. <br/>
     Examples: observation, in-situ, model, satellite, remote sensing, cruise, CTD, cytometry, ....<br/><br/>
-    Note these keywords are not mutually exclusive. For example, a CTD temperature measurement during a cruise can have all of the following keywords: observation, in-situ, cruise, CTD
+    Note these keywords are not mutually exclusive. For example, a CTD temperature measurement made during a cruise can have all of the following keywords: observation, in-situ, cruise, CTD
 
     * Data Producers: Keywords associated with the lead scientist/lab name/institute name.<br/> 
     Examples: UW, University of Washington, Virginia Armbrust, Ginger
 
-    * Cruise: The official/unoffical name of the cruise(s) during which the variable has been measured, if applicable.<br/> 
+    * Cruise: The official/unoffical name of the cruise(s) during which the variable was measured, if applicable.<br/> 
     Examples: KOK1606, Gradients_1, diel
 
-    * Project name: If your data are in the context of a project, includ the project name.<br/> 
+    * Project name: If your data are in the context of a project, include the project name.<br/> 
     Examples: HOT, Darwin, seaflow
 
 <br/><br/>    
@@ -436,7 +437,7 @@ Every single variable in CMAP is annotated with a range of semantically related 
 
 <a id="var_comment"></a>
 + **var_comment**<br/>
-Use this field to communicate any detailed information about this particular variable with the users. `var_comment` is visible in the Simons CMAP catalog (<a href="#fig_var_comment_cat">Fig. 11</a>). This field is not required.<br/>  
+Use this field to communicate any detailed information about this particular variable with the users. This could include, for example, description of a method. `var_comment` is visible in the Simons CMAP catalog (<a href="#fig_var_comment_cat">Fig. 11</a>). This field is not required.<br/>  
 
     * Required: No (optional)
     * Constraint: No length limits
