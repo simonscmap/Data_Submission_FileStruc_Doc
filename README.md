@@ -188,7 +188,7 @@ Indicates the release date of the dataset. If your dataset has been previously p
 + **dataset_make<sup>*</sup>**<br/>
 This is a required field that provides a broad category description of how a dataset was produced (also referred to as `dataset make`). Each dataset requires a single descriptor from a fixed set of options (observation, model, assimilation, laboratory), which are described below. This field will help in discovery of data in CMAP by categorizing datasets according to their make class. Please contact us if you believe your dataset make is not consistent with any of the categories below:<br/>
 
-    * **Observation**: refers to any in-situ or remote sensing measurements such as measurements made during a cruise expedition, data from an in-situ sensor, or satellite observations. Observations made as part of laboratory experiments <!--- Mohammad: to consider - should we include experiments conducted at sea such as on-deck incubation experiments -->  or at-sea experiments have their distinct category and do not fall in this category.
+    * **Observation**: refers to any in-situ or remote sensing measurements such as measurements made during a cruise expedition, data from an in-situ sensor, or satellite observations. Observations made as part of laboratory experiments <!--- Mohammad: to consider - should we include experiments conducted at sea such as on-deck incubation experiments -->  or at-sea experiments have their own distinct category and do not fall in this category.
 
     * **Model**: refers to the outputs of numerical simulations.  
 
