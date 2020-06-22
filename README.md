@@ -407,7 +407,7 @@ Indicates in which disciplines (such as Physics, Biology ...) this variable is c
 
 <a id="visualize"></a>
 + **visualize**<br/>
-This is a flag field and can only be 0 or 1. Fill this field with 1, if you think this variable can be visualized by Simons CMAP. In principle, any variable with numeric values can be visualized while variables with string values, station numbers, or quality flags may not be the best candidates for visualization in CMAP. Please consult with the data curation team if you have any questions. This is not a required field. <br/>  
+This is a flag field and can only be 0 or 1. Fill this field with 1, if you think this variable can be visualized on a graph by Simons CMAP. In principle, any variable with numeric values can be visualized while variables with string values, station numbers, or quality flags may not be the best candidates for visualization in CMAP. Please consult with the data curation team if you have any questions. This is not a required field. <br/>  
 <br/><br/>    
 
 
