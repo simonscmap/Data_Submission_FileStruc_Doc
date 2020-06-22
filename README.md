@@ -304,14 +304,14 @@ If your dataset represents measurements made during a cruise expedition (or expe
 <a id="variable_metadata"></a>
 ## Variable Metadata
 <div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div>  
-A dataset can contain multiple different measurements (variables). This sheet (labeled as "vars_meta_data") holds a list of top-level attributes about these variables such as the variable name, unit, and description. Each variable along with its attributes (metadata) are stored in separate rows. Below is the list of these attributes along with their descriptions. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
+A dataset can contain multiple different measurements (variables). This sheet (labeled as "vars_meta_data") holds a list of top-level attributes about these variables such as the variable name, unit, and description. Each variable along with its attributes (metadata) is stored in separate rows. Below is the list of these attributes along with their descriptions. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
 <br/><br/>
 
 
 
 <a id="var_short_name"></a>
 + **var_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts. So it should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc.  `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/> 
+This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores. Do not use space, dash, or special characters such as <, +, %, etc.  `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/> 
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -319,13 +319,13 @@ This name is meant to be used in programming codes and scripts. So it should onl
 
 <figure>
   <img id="fig_var_short_name_cat" src="./pics/var_short_name_cat.png" alt="Variable short name in catalog">
-  <figcaption>Figure 7. A sample dataset shown in the Simons CMAP catalog. The "var_shot_name" is highlighted in the red rectangle.</figcaption>
+  <figcaption>Figure 7. A sample dataset shown in the Simons CMAP catalog. The "var_short_name" is highlighted in the red rectangle.</figcaption>
 </figure>
 
 
 <figure>
   <img id="fig_var_short_name_viz" src="./pics/viz_short_name.png" alt="Variable short name in a figure">
-  <figcaption>Figure 8. A sample figure generated in the Simons CMAP catalog. The "var_shot_name" appears at the figure's title and is highlighted in the red rectangle.</figcaption>
+  <figcaption>Figure 8. A sample figure generated in the Simons CMAP catalog. The "var_short_name" appears as the figure title and is highlighted in the red rectangle.</figcaption>
 </figure>
 
 <br/><br/>    
