@@ -284,7 +284,7 @@ This is a flag indicating whether the dataset represents a climatological produ
 
 <a id="cruise_names"></a>
 + **cruise_names**<br/>
-If your dataset represents measurements made during a cruise expedition (or expeditions), provide a list of cruise official names here. If your dataset is associated with more than one cruise, please put them in separate cells under the cruise_names column. If the cruises have any nicknames, please include them too. Leave this field blank if your dataset is not associated with a cruise expedition. This is not a required field.<br/>
+If your dataset represents measurements made during a cruise expedition (or expeditions), provide a list of cruise official names here. If your dataset is associated with more than one cruise, please put them in separate cells under the cruise_names column. If the cruises have any nicknames, please include them in the same cell as the official cruise name separated by a comma(s). Leave this field blank if your dataset is not associated with a cruise expedition. This is not a required field.<br/>
 
     * Required: No (optional)
     * Constraint: No length limits
