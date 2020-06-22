@@ -118,7 +118,7 @@ This column holds the depth values with the following characteristics:<br/>
 <a id="vars"></a>
 + **var<sub>1</sub>  ...  var<sub>n</sub>**<br/>
 These columns represent the dataset variables (measurements). Please rename 
-them to names appropriate for your data. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. Leave a given cell empty for those instances when data was not taken and a value is missing. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
+them to names appropriate for your data. Please do not include units in these columns; units are recorded in the ["vars_meta_data"](#variable-metadata) sheet. Leave a given cell empty for those instances when data was not taken and a value is missing. <!--- Comment for Mohammad: Do I remember that you do NOT want people to include things link NA, etc?  If so, I think should explictly state this. --> Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
 ------------------------------------------
 
 <br/><br/>
