@@ -256,7 +256,7 @@ Use this field if your dataset has evolved over time and you wish to add notes a
 
 <a id="dataset_description"></a>
 + **dataset_description<sup>*</sup>**<br/>
-Include any description that you think will help a reader  better understand your dataset. This description can include information about data acquisition, processing methods, figures, and links to the external contents. This field serves as the dataset documentation that is visible in the Simons CMAP catalog (<a href="#fig_dataset_description_cat">Fig. 6</a>). This field is required.<br/>  
+Include any description that you think will help a reader  better understand your dataset. This description can include information about data acquisition, processing methods, figures, and links to external content. This field serves as the dataset documentation that is visible in the Simons CMAP catalog (<a href="#fig_dataset_description_cat">Fig. 6</a>). This field is required.<br/>  
 
     * Required: Yes
     * Constraint: No length limits
