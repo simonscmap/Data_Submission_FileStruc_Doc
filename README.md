@@ -145,7 +145,7 @@ This name is meant to be used in programming codes and scripts.  It should only 
 
 <a id="dataset_long_name"></a>
 + **dataset_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>), visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in "<a href="#dataset_description">dataset_description</a>" . <br/>  
+ A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>) and visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in "<a href="#dataset_description">dataset_description</a>" . <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
@@ -176,7 +176,7 @@ Please assign a version number or an identifier to your dataset such as "1.0.0" 
 
 <a id="dataset_release_date"></a>
 + **dataset_release_date<sup>*</sup>**<br/>
-Indicates the release date of the dataset. If your dataset has been previously published or released publicly, please specify that date. Otherwise, note the date the data was submitted to CMAP. <br/>
+Indicates the release date of the dataset. If your dataset has been previously published or released publicly, please specify that date. Otherwise, use the date the data was submitted to CMAP. <br/>
 
     * Required: Yes
     * Constraint: Less than 50 characters
