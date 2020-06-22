@@ -176,7 +176,7 @@ Please assign a version number or an identifier to your dataset such as "1.0.0" 
 
 <a id="dataset_release_date"></a>
 + **dataset_release_date<sup>*</sup>**<br/>
-Indicates the release date of the dataset. If your dataset has been previously published or released publicly, please specify that date. Otherwise, use the date the data was submitted to CMAP. <br/>
+Indicates the release date of the dataset. If your dataset has been previously published or released publicly, please specify that date. Otherwise, use the date the dataset was submitted to CMAP. <br/>
 
     * Required: Yes
     * Constraint: Less than 50 characters
