@@ -47,16 +47,16 @@
 <br/><br/>
 
 <a id="introduction"></a>
-## Introduction 
+## Introduction
 <div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div>   
 This document describes the specifications of the data and metadata fields required for submitting datasets to the Simons CMAP database. The submitted data can be in any file format such as netCDF, parquet, plain text, CSV, or Excel files. The only requirement is that information for all required fields (specified by <sup>*</sup> ) is provided. For simplicity, we have created an empty dataset template in Excel format that can be found <a href="https://github.com/simonscmap/DBIngest/raw/master/template/datasetTemplate.xlsx">here</a>. You can use this template to load and submit your dataset. The data and metadata field names (e.g. time, lat, lon, short_name, long_name, ...) used in the template file are based on the CF and COARDS naming conventions [<a href="#ref1">1</a>, <a href="#ref1">2</a>, <a href="#ref1">3</a>].
 
 
-The CMAP data template consists of three sheets: data, dataset metadata, and variable metadata. Data is stored in the first sheet called “data”. Metadata that describes the dataset is entered in the second sheet called “dataset_meta_data”. Metadata associated with the variables in the dataset are entered in the third sheet called “vars_meta_data”. Information must be provided for all columns except those specifcally noted as optional. For those datasets that use the Excel template, a web-based tool is available through <a href="https://simonscmap.com/datasubmission">Simons CMAP</a> to validate and modify a given  dataset  to ensure it conforms to structure requirements for dataset submission. Below are a few example datasets that have been prepared using the specifications described in this document: 
+The CMAP data template consists of three sheets: data, dataset metadata, and variable metadata. Data is stored in the first sheet called “data”. Metadata that describes the dataset is entered in the second sheet called “dataset_meta_data”. Metadata associated with the variables in the dataset are entered in the third sheet called “vars_meta_data”. Information must be provided for all columns except those specifcally noted as optional. For those datasets that use the Excel template, a web-based tool is available through <a href="https://simonscmap.com/datasubmission">Simons CMAP</a> to validate and modify a given  dataset  to ensure it conforms to structure requirements for dataset submission. Below are a few example datasets that have been prepared using the specifications described in this document:
 
-* [SeaFlow](https://github.com/simonscmap/DBIngest/raw/master/template/SeaFlow_example.xlsx)
-* [Gradients 1 Fluormetric Chl](https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020-03-03_V1.1_example.xlsx)
-* [Gradients 1 Cobalamin](https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example.xlsx)
+* [SeaFlow](https://github.com/simonscmap/DBIngest/raw/master/template/SeaFlow_2020_06_25_example.xlsx)
+* [Gradients 1 Fluormetric Chl](https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020_06_25_example.xlsx)
+* [Gradients 1 Cobalamin](https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example_2020_06_26.xlsx)
 * [Gradients 3 Underway CTD](https://github.com/simonscmap/DBIngest/raw/master/template/KM1906_Gradients3_uwayCTD_example.xlsx)
 ------------------------------------------
 
@@ -68,7 +68,7 @@ The CMAP data template consists of three sheets: data, dataset metadata, and var
 
 <a id="data_sheet"></a>
 ## Data Sheet
-<div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div> 
+<div style="text-align: right"><a href="#toc" title="Table of Contents">Table of Contents</a></div>
 
 | time   |      lat     |  lon |  depth [if exists] | var<sub>1</sub> | ... | var<sub>n</sub>
 |:----------:|:-------------:|:------:|:------:|:------:|:------:|:------:|
@@ -84,11 +84,11 @@ The date and time sections are separated by a "T" character.<br/>
 Example: 2010-02-09T18:15:00
     * Year (%Y) is a four-digit value: example 2010
     * Month (%m) is a two-digit value: example 02 (for Feburary)
-    * Day (%d) is a two-digit value: example 09 
-    * Hour (%H) is a two-digit value from 00 to 23: example 18 
-    * Minute (%M) is a two-digit value from 00 to 59: example 15 
+    * Day (%d) is a two-digit value: example 09
+    * Hour (%H) is a two-digit value from 00 to 23: example 18
+    * Minute (%M) is a two-digit value from 00 to 59: example 15
     * Second (%S) is a two-digit value from 00 to 59: example 00
-    * Time zone: UTC 
+    * Time zone: UTC
 <br/><br/>
 
 <a id="lat"></a>
@@ -96,7 +96,7 @@ Example: 2010-02-09T18:15:00
 This column holds the latitude values with the following characteristics:<br/>
     * Type: Numeric values from -90 to 90
     * Format: Decimal (not military grid system)
-    * Unit: degree North 
+    * Unit: degree North
 <br/><br/>
 
 <a id="lon"></a>
@@ -104,7 +104,7 @@ This column holds the latitude values with the following characteristics:<br/>
 This column holds the longitude values with the following characteristics:<br/>
     * Type: Numeric values from -180 to 180
     * Format: Decimal (not military grid system)
-    * Unit: degree East 
+    * Unit: degree East
 <br/><br/>
 
 <a id="depth"></a>
@@ -112,13 +112,13 @@ This column holds the longitude values with the following characteristics:<br/>
 This column holds the depth values with the following characteristics:<br/>
     * Type: Positive numeric values. It is 0 at surface with increased values with depth.
     * Format: Decimal
-    * Unit: meter 
+    * Unit: meter
 <br/><br/>
 
 <a id="vars"></a>
 + **var<sub>1</sub>  ...  var<sub>n</sub>**<br/>
-These columns represent the dataset variables (measurements). Please rename 
-them to names appropriate for your data. Note that  these names should be identical to the names defined as <a href="#var_short_name">var_short_name</a> in the 
+These columns represent the dataset variables (measurements). Please rename
+them to names appropriate for your data. Note that  these names should be identical to the names defined as <a href="#var_short_name">var_short_name</a> in the
 <a href="#variable_metadata">Variable Metadata</a> sheet.
 Please do not include units in these columns; units are recorded in the <a href="#variable_metadata">Variable Metadata</a> sheet. Leave a given cell empty for those instances when data was not taken and a value is missing. Do not replace the missing data with arbitrary values such as "99999", "0", "UNKNOWN", etc. Please review the example datasets listed in the <a href="#introduction">introduction</a> for more information.
 ------------------------------------------
@@ -139,7 +139,7 @@ This sheet holds a list of top-level attributes about the dataset such as the da
 
 <a id="dataset_short_name"></a>
 + **dataset_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores (the first character can not be a number). Do not use space, dash, or special characters such as <, +, %, etc. The name must be shorter than 50 characters and is a required field. <br/> 
+This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores (the first character can not be a number). Do not use space, dash, or special characters such as <, +, %, etc. The name must be shorter than 50 characters and is a required field. <br/>
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -220,7 +220,7 @@ Specifies the group and/or the institute name of the data owner(s). It can also
 </figure>
 
 <!--- Comment For Raphael: data source in plots (see figure above) seem to be data distributor not data source. Ask Mike to correct it. -->
-<br/><br/> 
+<br/><br/>
 
 
 <a id="dataset_distributor"></a>
@@ -240,14 +240,14 @@ Specify how your dataset should be acknowleged. You may mention your funding age
     * Required: No (optional)
     * Constraint: No length limits    
 <br/><br/>  
-    
+
 <figure>
   <img id="fig_dataset_ack_cat" src="./pics/dataset_ack_cat.png" alt="Dataset Acknowledgment in Catalog">
   <figcaption>Figure 5. A sample dataset shown in the Simons CMAP catalog. The "dataset_acknowledgement" is enclosed in the red rectangle.</figcaption>
 </figure>
 
 
-<br/><br/> 
+<br/><br/>
 
 
 <a id="dataset_history"></a>
@@ -274,7 +274,7 @@ Include any description that you think will help a reader  better understand you
 
 <a id="dataset_references"></a>
 + **dataset_references**<br/>
-List any publications or documentation that one may cite in reference to the dataset. If there are more than one reference, please put them in separate cells under the dataset_reference column. Leave this field empty if there are no publications associated with this dataset. This is not a required field. 
+List any publications or documentation that one may cite in reference to the dataset. If there are more than one reference, please put them in separate cells under the dataset_reference column. Leave this field empty if there are no publications associated with this dataset. This is not a required field.
 <br/><br/>  
 
 
@@ -313,7 +313,7 @@ A dataset can contain multiple different measurements (variables). This sheet (l
 
 <a id="var_short_name"></a>
 + **var_short_name<sup>*</sup>**<br/>
-This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores (the first character can not be a number). Do not use space, dash, or special characters such as <, +, %, etc. Finally, there must be a one-to-one match between the short_names listed here and the variable column names in the "Data" sheet (see <a href="#vars">vars</a>). `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/> 
+This name is meant to be used in programming codes and scripts. It should only contain a combination of letters, numbers, and underscores (the first character can not be a number). Do not use space, dash, or special characters such as <, +, %, etc. Finally, there must be a one-to-one match between the short_names listed here and the variable column names in the "Data" sheet (see <a href="#vars">vars</a>). `var_short_name` will be seen in the CMAP catalog (<a href="#fig_var_short_name_cat">Fig. 7</a>), and will appear as the title of the generated figures (<a href="#fig_var_short_name_viz">Fig. 8</a>). This a required field and must be shorter than 50 characters. <br/>
 
     * Required: Yes
     * Constraint: Less than 50 characters
@@ -358,7 +358,7 @@ This name is meant to be used in programming codes and scripts. It should only c
 
 <a id="var_sensor"></a>
 + **var_sensor<sup>*</sup>**<br/>
-This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. If your dataset is the output of a numerical model or a combination of model and observation, use the term "simulation" and "blend", respectively. This field will significantly help to find and categorize data generated using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog. 
+This is a required field that refers to the instrument used to produce the measurements such as `CTD`, `fluorometer`, `flow cytometer`, `sediment trap`, etc. If your dataset is the result of a field expedition but you are not sure about the name of the instrument used for the measurements, use the term "in-situ" to fill out this field. If your dataset is the output of a numerical model or a combination of model and observation, use the term "simulation" and "blend", respectively. This field will significantly help to find and categorize data generated using a similar class of instruments. `var_sensor` will be visible in the Simons CMAP catalog.
 
 <br/><br/>  
 
@@ -415,9 +415,9 @@ This is a flag field and can only be 0 or 1. Fill this field with 1, if you thin
 
 <a id="var_keywords"></a>
 + **var_keywords<sup>*</sup>**<br/>
-Every variable in CMAP is annotated with a range of semantically related keywords to ensure a variable can be easily discovered. For example, use of keywords allows you to search using the term "PO4" and retrieve a list of all phosphate data even if "PO4" was not used as the var_long_name for a given dataset. Similarly, if one searches for "MIT", CMAP returns all variables generated by MIT groups, or if one looks for "model", only model outputs are returned. These "semantic" searches are made possible using the keywords that are added to each variable. We would like to have keywords to cover the following areas described below (where applicable). Please note that there is no limit to the number of keywords used for a variable. The keywords are case-insensitive and you may add/remove them at any point (even after data ingestion). This is a required field. 
+Every variable in CMAP is annotated with a range of semantically related keywords to ensure a variable can be easily discovered. For example, use of keywords allows you to search using the term "PO4" and retrieve a list of all phosphate data even if "PO4" was not used as the var_long_name for a given dataset. Similarly, if one searches for "MIT", CMAP returns all variables generated by MIT groups, or if one looks for "model", only model outputs are returned. These "semantic" searches are made possible using the keywords that are added to each variable. We would like to have keywords to cover the following areas described below (where applicable). Please note that there is no limit to the number of keywords used for a variable. The keywords are case-insensitive and you may add/remove them at any point (even after data ingestion). This is a required field.
 
-    * Alternative names: other official, unofficial, abbreviation, technical (or jargon) names or notations associated with the variable. <br/> 
+    * Alternative names: other official, unofficial, abbreviation, technical (or jargon) names or notations associated with the variable. <br/>
     Examples: Nitrate, NO3, NO_3
     <!--- Mohammad - do you want to include an example that illustrates that you don't need to include "subset" keywords like Pro, Proch, Prochlor, Prochlorococcus -->
 
@@ -425,13 +425,13 @@ Every variable in CMAP is annotated with a range of semantically related keyword
     Examples: observation, in-situ, model, satellite, remote sensing, cruise, CTD, cytometry, ....<br/><br/>
     Note these keywords are not mutually exclusive. For example, a CTD temperature measurement made during a cruise can have all of the following keywords: observation, in-situ, cruise, CTD
 
-    * Data Producers: Keywords associated with the lead scientist/lab name/institute name.<br/> 
+    * Data Producers: Keywords associated with the lead scientist/lab name/institute name.<br/>
     Examples: UW, University of Washington, Virginia Armbrust, Ginger
 
-    * Cruise: The official/unoffical name of the cruise(s) during which the variable was measured, if applicable.<br/> 
+    * Cruise: The official/unoffical name of the cruise(s) during which the variable was measured, if applicable.<br/>
     Examples: KOK1606, Gradients_1, diel
 
-    * Project name: If your data are in the context of a project, include the project name.<br/> 
+    * Project name: If your data are in the context of a project, include the project name.<br/>
     Examples: HOT, Darwin, SeaFlow
 
 <br/><br/>    
@@ -450,7 +450,7 @@ Use this field to communicate any detailed information about this particular var
   <figcaption>Figure 11. A sample dataset shown in the Simons CMAP catalog. The "var_commentn" is accessible using the "Comment" button, highlighted in the red rectangle.</figcaption>
 </figure>
 
-<br/><br/> 
+<br/><br/>
 ------------------------------------------
 
 
