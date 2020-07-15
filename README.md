@@ -56,7 +56,7 @@ The CMAP data template consists of three sheets: data, dataset metadata, and var
 
 * [SeaFlow](https://github.com/simonscmap/DBIngest/raw/master/template/SeaFlow_2020_06_25_example.xlsx)
 * [Gradients 1 Fluormetric Chl](https://github.com/simonscmap/DBIngest/raw/master/template/Gradients1-KOK1606-FluorometricChlorophyll_2020_06_25_example.xlsx)
-* [Gradients 1 Cobalamin](https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example_2020_06_26.xlsx)
+* [Gradients 1 Cobalamin](https://github.com/simonscmap/DBIngest/raw/master/template/KOK1606_Gradients1_Cobalamin_example_2020_07_15.xlsx)
 * [Gradients 3 Underway CTD](https://github.com/simonscmap/DBIngest/raw/master/template/KM1906_Gradients3_uwayCTD_example.xlsx)
 ------------------------------------------
 
@@ -147,7 +147,8 @@ This name is meant to be used in programming codes and scripts. It should only c
 
 <a id="dataset_long_name"></a>
 + **dataset_long_name<sup>*</sup>**<br/>
- A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>) and visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in "<a href="#dataset_description">dataset_description</a>" . <br/>  
+ A descriptive and human-readable name for the dataset. This name will identify your dataset in the CMAP catalog (<a href="#fig_dataset_long_name_cat">Fig.1</a>) and visualization search dialog (<a href="#fig_dataset_long_name_viz">Fig.2</a>). Any Unicode character can be used here, but please avoid names longer than 200 characters as they may get trimmed when displayed on graphical interfaces. A full textual description of your dataset, with no length limits, is entered in "<a href="#dataset_description">dataset_description</a>" .
+ If your dataset is associated with a cruise, we recommend including the official cruise and and the cruise nickname in the dataset_long_name. For example: Underway CTD Gradients 3 KM1906. <br/>  
 
     * Required: Yes
     * Constraint: Less than 200 characters
